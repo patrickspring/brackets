@@ -1,0 +1,336 @@
+/*  lake tahoe index.html
+====== */
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lake Tahoe</title>
+    <link rel="stylesheet"href="css/style.css">
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body> 
+    <header id="top" class="main-header">
+      <span class="title">Journey Through the Sierra Nevada Mountains</span>
+      <h1>Lake Tahoe, California</h1>
+      <img class="arrow" src="img/arrow.svg" alt="Down arrow">
+    </header>
+    
+		<div class="primary-content t-border">
+			<p class="intro">
+				Lake Tahoe is one of the most breathtaking attractions located in California. It's home to a number of ski resorts, summer outdoor recreation, and tourist attractions. Snow and skiing are a significant part of the area's reputation.
+			</p>
+			<a class="callout" href="#more">Find out more</a>
+      
+      <div class="wildlife">
+        <h2>Check out all the Wildlife</h2>
+        <p>
+          As spawning season approaches, the fish acquire a humpback and protuberant jaw. After spawning, they die and their carcasses provide a feast for gatherings of <a href="#mink">mink</a>, <a href="#bears">bears</a>, and <a href="#eagles">bald eagles</a>.
+        </p>
+      </div><!-- End .wildlife -->
+      
+			<a class="callout" href="#wildlife">See the Wildlife</a>
+		</div><!-- End .primary-content -->
+
+		<div class="secondary-content t-border group"> 
+      <div class="resorts">
+        <img src="img/resort.jpg" alt="Resort">
+        <h3>From Tents to Resorts</h3>
+        <p>
+          Lake Tahoe is full of wonderful places to stay. You have the ability to sleep in the outdoors in a tent, or relax like a king at a five star resort. Here are our top three resorts:
+        </p>
+        <ul>
+          <li><a href="#hotels">Lake Tahoe Resort Hotel</a></li>
+          <li><a href="#resorts">South Lake Tahoe Resorts</a></li>
+          <li><a href="#lodging">Tahoe Ski Resort Lodging</a></li>
+        </ul>		
+      </div>
+      
+      <div class="tips">
+        <img src="img/mtn-landscape.jpg" alt="Mountain Landscape">
+        <h3>Pack Accordingly</h3>
+        <p>
+          One of most important things when it comes to traveling through the great outdoors is packing accordingly. Here are a few tips:
+        </p>
+        <ol>
+          <li>Bring layers of clothing</li>
+          <li>Pack sunscreen</li>
+          <li>Carry extra water just in case</li>
+          <li>Pack light</li>
+        </ol>
+      </div>
+		</div><!-- End .secondary-content -->
+    
+		<footer class="main-footer">
+			<p>All rights reserved to the state of <a href="#">California</a>.</p>
+			<a href="#top">Back to top &raquo;</a>
+		</footer>
+  </body>
+</html>
+
+
+/*  font  */
+
+
+
+/*  CSS snippet for importing web font formats  */
+
+  src: url('../fonts/abolition-regular-webfont.eot');
+  src: url('../fonts/abolition-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/abolition-regular-webfont.woff') format('woff'),
+       url('../fonts/abolition-regular-webfont.ttf') format('truetype');
+       
+       
+
+
+/* style.css     */
+
+
+/* Web Fonts --------------------- */
+
+@font-face {
+  font-family: 'Abolition Regular';
+     src: url('../fonts/abolition-regular-webfont.eot');
+     src: url('../fonts/abolition-regular-webfont.eot?#iefix') format('embedded-opentype'),
+          url('../fonts/abolition-regular-webfont.woff') format('woff'),
+          url('../fonts/abolition-regular-webfont.ttf') format('truetype');
+}
+/* Base Styles -------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #878787;
+  margin: 0;
+  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2 {
+  font-family: 'Abolition Regular', Helvetica, Arial, sans-serif;
+}
+
+h1 {  
+  font-size: 5.625rem; /* 90px/16px  */
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1.3;
+  text-shadow: 0 1px 1px rgba(0,0,0,.8);
+  margin: 12px 0 0;
+}
+
+h2 {
+  font-size: 3.3125em; /* 53px/16px  */
+  font-weight: normal;
+  line-height: 1.1;
+  margin: 0 0 .5em; /* 0 0 26px */
+}
+
+h3 {
+  font-size: 1.25em; /* 20px/16px  */
+  color: #48525c;
+  line-height: 1.2;
+  margin-bottom: 1.7em; /* 34px */
+}
+
+img {
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px; 
+}
+
+ul,
+ol {
+  margin: 30px 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Pseudo-classes ------------------ */
+
+a:link {
+  color: rgb(255, 169, 73);
+  text-decoration: none;
+}
+
+a:visited {
+  color: lightblue;
+}
+
+a:hover {
+  color: rgba(255, 169, 73, .4);
+}
+
+a:active {
+  color: lightcoral;
+}
+
+/* Main Styles --------------------- */
+
+.main-header {
+  padding-top: 170px;
+  height: 850px;
+  
+  background: linear-gradient(#ffa949, transparent 90%),
+              linear-gradient(0deg, #fff, transparent),
+              #ffa949 url('../img/mountains.jpg') no-repeat center;
+  
+  background-size: cover;
+}
+
+.title {
+  color: white;
+  font-size: 1.625rem; /* 26px/16px */
+  letter-spacing: .065em;
+  font-weight: 200;
+  border-bottom: 2px solid;
+  padding-bottom: 10px;
+}
+
+.intro {
+  font-size: 1.25em; /* 20px/16px */
+  line-height: 1.6;  
+}
+
+.primary-content,
+.main-header,
+.main-footer {
+  text-align: center;
+}
+
+.primary-content {
+	padding-top: 25px;
+  padding-bottom: 95px;
+}
+
+.secondary-content {
+	padding-top: 80px;
+	padding-bottom: 70px;
+  border-bottom: 2px solid #dfe2e6;
+}
+
+.callout {
+  font-size: 1.25em;
+  border-bottom: 3px solid;
+  padding: 0 9px 3px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.main-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 10px solid #ffa949;
+}
+
+.t-border {
+  border-top: 2px solid #dfe2e6;
+}
+
+/* Layout Styles ------------------ */
+
+.primary-content, 
+.secondary-content {
+  width: 75%;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: auto;
+  max-width: 960px;
+}
+
+.wildlife {
+  color: white;
+  text-align: left;
+  padding: 18% 24%;
+  border-top: 10px solid #ffa949;
+  margin: 105px 0 60px;
+  background: #434a52 url('../img/bear.jpg') no-repeat center;
+  background-size: cover;
+  box-shadow: inset 0px 0px 50px 10px rgba(0,0,0,.8);
+  border-radius: 10%;
+
+}
+
+.arrow {
+  width: 50px;
+  margin-top: 150px;
+}
+
+/* Floated Columns ------------------ */
+
+.resorts,
+.tips {
+  width: 46.5%;
+}
+
+.tips {
+  float: left;
+}
+
+.resorts {
+  float: right;
+}
+
+/* Float Clearfix ------------------ */
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Media Queries --------------------- */
+
+@media (max-width; 1024px) {
+   .primary-content,
+   .secondary-content {
+    width: 90%;
+  }
+  .wildlife {
+    padding: 10% 12%;
+    margin: 50px 0 20px;
+ }
+}
+
+@media (max-width: 768px) {
+  .primary-content,
+  .secondary-content {
+    width: 100%;
+    padding: 20px;
+    border-top: none; 
+  }
+
+  .main-header {
+  max-height: 380px;
+  padding: 50px 25px 0;
+  }
+  .title {
+    font-size: 1.3rem;
+    border: none;
+  }
+  h1 {
+    font-size: 5rem;
+    line-height: 1.1;
+  }
+  .arrow {
+    display: none;
+  }
+  intro {
+    font-size: 1rem;
+  }
+  .resorts,
+  .tips {
+    float: none;
+    width: 100%;
+  }
+  .main-footer {
+    padding: 20px 0;
+  }
+}
+
+
+

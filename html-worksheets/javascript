@@ -1,0 +1,949 @@
+/*   JAVASCRIPT   */
+
+/*   random number   */
+
+/*  anonymous.js   */
+
+
+var alertRandom = function () {
+    var randomNumber = Math.floor(Math.random() * 6 ) + 1;
+    alert(randomNumber);
+};
+alertRandom();
+
+
+
+/*   main.css    */
+
+
+html,
+body,
+div,
+h1,
+h2,
+p,
+ul,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  display: block;
+}
+
+body {
+  background: #edeff0;
+  padding: 50px 0 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+}
+
+h1,
+h2 {
+  font-size: 2.4em;
+  font-weight: 400;
+  margin-bottom: 8px;
+  color: #384047;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+p {
+  color: #8d9aa5;
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 1080px;
+  background: white;
+  padding: 30px 15px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.button {
+  background: #3f8abf;
+  padding: 8px 18px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.4em;
+  color: white;
+  font-weight: 500;
+  border: 3px solid #3f8abf;
+  outline: none;
+  cursor: pointer;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 0 0 #3574a0;
+  -moz-box-shadow: 0 2px 0 0 #3574a0;
+  box-shadow: 0 2px 0 0 #3574a0;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #397cac;
+  border-color: #397cac;
+  -webkit-box-shadow: 0 2px 0 0 #2c6085;
+  -moz-box-shadow: 0 2px 0 0 #2c6085;
+  box-shadow: 0 2px 0 0 #2c6085;
+}
+
+
+
+/*   index.html    */
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Let's Make a Function</title>
+ </head>
+<body>
+  <div class="container">
+  <h1>Let's Make a Function</h1>
+   <script src="random.js"></script> 
+  </div>
+</body>
+</html>
+
+
+
+/*    random.js    */
+
+
+function alertRandom() {
+  var randomNumber = Math.floor( Math.random() * 6 ) + 1;
+  alert(randomNumber);
+}
+alertRandom();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*     Number Guess   */
+
+
+/*   index.html    */
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Random Number Guessing Game</title>
+ </head>
+<body>
+  <div class="container">
+  <h1>Random Number Guessing Game</h1>
+   <script src="script.js"></script> 
+  </div>
+</body>
+</html>
+
+
+/*    script.js   */
+
+
+var correctGuess = false;
+var randomNumber = Math.floor(Math.random() * 6 ) + 1;
+var guess = prompt('I am thinking of a number between 1 and 6. What is it?');
+if (parseInt(guess) === randomNumber ) {
+  correctGuess = true;
+} else if ( parseInt(guess) < randomNumber ) {
+  var guessMore = prompt('Try again. The number I am thinking of is more than ' + guess);
+  if (parseInt(guessMore) === randomNumber) {
+      correctGuess = true;
+  }
+} else if ( parseInt(guess) > randomNumber ) {
+   var guessLess = prompt('Try again. The number I am thinking of is less than ' + guess);
+  if (parseInt(guessLess) === randomNumber) {
+      correctGuess = true;
+  }
+}
+if ( correctGuess ) {
+    document.write('<p>You guessed the number!</p>');
+} else {
+    document.write('<p>Sorry. The number was ' + randomNumber + '.</p>');
+}
+
+
+/*   main.css   */
+
+
+html,
+body,
+div,
+h1,
+h2,
+p,
+ul,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  display: block;
+}
+
+body {
+  background: #edeff0;
+  padding: 50px 0 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
+}
+
+h1,
+h2 {
+  font-size: 2.4em;
+  font-weight: 400;
+  margin-bottom: 8px;
+  color: #384047;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+p {
+  color: #8d9aa5;
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 1080px;
+  background: white;
+  padding: 30px 15px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.button {
+  background: #3f8abf;
+  padding: 8px 18px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.4em;
+  color: white;
+  font-weight: 500;
+  border: 3px solid #3f8abf;
+  outline: none;
+  cursor: pointer;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 0 0 #3574a0;
+  -moz-box-shadow: 0 2px 0 0 #3574a0;
+  box-shadow: 0 2px 0 0 #3574a0;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #397cac;
+  border-color: #397cac;
+  -webkit-box-shadow: 0 2px 0 0 #2c6085;
+  -moz-box-shadow: 0 2px 0 0 #2c6085;
+  box-shadow: 0 2px 0 0 #2c6085;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*    Loops random number    */
+
+
+
+/*   index html     */
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Let&rsquo;s Make Random Numbers</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Let&rsquo;s Make Random Numbers</h1>
+<script src="scripts.js"></script>
+</body>
+</html>
+
+
+/*    js       */
+
+
+
+function randomNumber(upper) {
+  return Math.floor( Math.random() * upper ) + 1;
+}
+var counter = 0;
+while (counter < 10 ) {
+  var randNum = randomNumber(6);
+  document.write(random + ' ');
+  counter += 1;
+}
+
+
+
+
+
+
+/*   while loop    */
+/*  it loops for a while   */
+
+
+
+var upper = 10000;
+var randomNumber = getRandomNumber(upper);
+var guess;
+var attempts= 0;
+
+function getRandomNumber(upper) {
+  return Math.floor( Math.random() * upper ) + 1;
+}
+
+while (guess !== randomNumber) {
+ guess = getRandomNumber( upper );
+ attempts += 1;
+}
+document.write("<p>The random number was: " + randomNumber + "<p>");
+document.write("<p>It took the computer " + attempts + " attempts to get it right.</p>")
+
+
+
+/*  code for password situation  loop condiditons   */
+
+var secret = prompt("What is the secret password?");
+while ( secret !== "sesame" ) {
+  secret = prompt("What is the secret password?");    
+}
+document.write("You know the secret password. Welcome.");
+
+
+
+
+
+
+
+/*   example of do while js      */
+
+
+
+
+var randomNumber = getRandomNumber(10);
+var guess;
+var guessCount = 0;
+var correctGuess = false;
+
+function getRandomNumber( upper ) {
+  var num = Math.floor(Math.random() * upper) + 1; 
+  return num;
+}
+
+do {
+  guess = prompt('i am thinking of a nomber between 1 and 10.  what is it?');
+  guesscount += 1;
+  if (parseInt(guess) === randomNumber) {
+    correctGuess = true;
+  }
+} while ( ! correctGuess )
+  document.write('<h1>You guessed the number!</h1>');
+  document.write('It took you ' + guessCount + ' tries to guess the number ' + randomNumber);
+
+
+
+
+
+
+
+
+/*   for loop     */
+
+
+
+
+
+
+
+var html = '';
+
+for (var i = 1; i <=10; i +=1 ) {
+  html += '<div>' + i + '</div>';
+}
+document.write(html);
+
+
+
+
+
+
+
+
+
+
+/*     break  with guess number   js    */
+
+
+
+
+
+
+var randomNumber = getRandomNumber(10);
+var guess;
+var guessCount = 0;
+var correctGuess = false;
+
+function getRandomNumber( upper ) {
+  var num = Math.floor(Math.random() * upper) + 1; 
+  return num;
+}
+
+while ( guessCount < 10 ) {
+  guess = prompt('I am thinking of a number between 1 and 10. What is it?');
+  guessCount += 1;
+  if (parseInt(guess) === randomNumber) {
+    correctGuess = true;
+    break;
+  }  
+} 
+if ( correctGuess )  {
+  document.write('<h1>You guessed the number!</h1>');
+  document.write('It took you ' + guessCount + ' tries to guess the number ' + randomNumber);
+} else {
+  document.write('<h1>Sorry. you did not guess the number.</h1>');
+}
+
+
+
+
+/*  shortening long lists   */
+
+
+
+
+var html = '';
+var red;
+var green;
+var blue;
+var rgbColor;
+ 
+
+/*  multi code shortened down    
+
+red = Math.floor(Math.random() * 256 );
+green = Math.floor(Math.random() * 256 );
+blue = Math.floor(Math.random() * 256 );
+rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+html += '<div style="background-color:' + rgbColor + '"></div>';
+
+red = Math.floor(Math.random() * 256 );
+green = Math.floor(Math.random() * 256 );
+blue = Math.floor(Math.random() * 256 );
+rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+html += '<div style="background-color:' + rgbColor + '"></div>'; 
+
+*/
+
+
+for ( var i = 1; i <= 10; i += 1)  {
+red = Math.floor(Math.random() * 256 );
+green = Math.floor(Math.random() * 256 );
+blue = Math.floor(Math.random() * 256 );
+rgbColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+html += '<div style="background-color:' + rgbColor + '"></div>';
+}
+
+
+document.write(html);
+
+
+
+
+
+
+
+
+/*   arrays  js      */
+
+
+/*  examples  */
+
+var data = [
+ 3,2,1
+];
+
+
+var shoppingList = [
+  'carrots',
+  'milk',
+  'eggs'
+];
+
+
+
+
+/*    adding to a list
+
+
+
+
+ ====the 'push' adds to your list one after the other,
+ in the order you add them====
+ */
+
+
+var playList = [];
+playList.push('I Did It My Way');
+playList.push('Respect', 'Imagine');
+
+/*  the unshift adds them to the front of the list  */
+
+playList.unshift('Born to Run');
+playList.unshift('Louie Louie', 'Maybellene');
+printList( playList );
+
+
+/*   coming up, an exciting way to take stuff off a list.
+     which if i was just doing this on paper with a pen,
+     i would be done by now.  just takes a few scratches.     */
+
+
+/* to remove first item from array with .shift()   */
+
+var items = ['Hat', 'Ball', 'Shoes'];
+var firstItem = items.shift();
+
+/*  'firstItem' now holds Hat, while 'items' is now just
+    Ball and Shoes    */
+
+/*  this one removes last item with .pop()   */
+
+var items = ['Hat', 'Ball', 'Shoes'];
+var lastItem = items.pop();
+
+/*  'lastItem' now holds Shoes, while 'items' is now just
+    Ball and Hat    */
+    
+    
+
+/* enjoying your saturday?   */
+
+
+
+
+
+
+
+
+
+
+/*   have know idea what this one did,
+    making loops with arrays,  yup
+    I think we used the html code for the lists of songs, and did something with it
+    
+    */
+    
+    
+    
+    
+    var playList = [
+  'I Did It My Way',
+  'Respect',
+  'Imagine',
+  'Born to Run',
+  'Louie Louie',
+  'Maybellene'
+];
+
+function print(message) {
+  document.write(message);
+}
+
+function printList( list ) {
+  var listHTML = '<ol>';
+  for ( var i = 0; i < list.length; i += 1 ) {
+   listHTML += '<li>' + list[i] + '</li>'; 
+ }
+  listHTML += '</ol>';
+  print(listHTML);
+}
+printList(playList);
+
+
+
+
+/*    idexOf  stuff example   */
+
+
+
+
+
+var inStock = [ 'apples', 'eggs', 'milk', 'cookies', 'cheese', 'bread', 'lettuce', 'carrot', 'broccoli', 'pizza', 'potato', 'crackers', 'onion', 'tofu', 'frozen dinner', 'cucumber'];
+var search;
+
+function print(message) {
+  document.write( '<p>' + message + '</p>');
+}
+
+while (true) {
+  search = prompt("Search for a product in our store.  Type 'list' to show all of the produce and 'quit' to exit");
+  search = search.toLowerCase();
+  if ( search === 'quit') {
+    break;
+  } else if ( search === 'list' ) {
+    print( inStock.join(',') );
+  } else {
+    if ( inStock.indexOf( search ) > -1 ) {
+      print( 'Yes, we have ' + search + ' in the store.');
+    } else {
+      print( search + ' is not in stock.');
+    }
+  }
+}
+
+
+
+
+
+/*   arrays in arrays  notice the double brackets [] in            playlist
+      combining titles and singers names            */
+
+
+
+var playList = [
+  ['I Did It My Way', 'Frank'],
+  ['Respect', 'Aretha'],
+  ['Imagine', 'John'],
+  ['Born to Run', 'Bruce'],
+  ['Louie Louie', 'Kingsmen'],
+  ['Maybellene', 'Chuck']
+];
+
+function print(message) {
+  document.write(message);
+}
+
+function printSongs( songs ) {
+  var listHTML = '<ol>';
+  for ( var i = 0; i < songs.length; i += 1) {
+    listHTML += '<li>' + songs[i][0] + ' by ' + songs[i][1] + '</li>';
+  }
+  listHTML += '</ol>';
+  print(listHTML);
+}
+
+printSongs(playList);
+
+
+
+
+/*         examples of object js
+*/
+
+
+
+
+
+
+var person = {
+  name : 'Sarah',
+  country : 'US',
+  age : '35',
+  trehouseStudent : true,
+  skills : ['JavaScript', 'HTML', 'CSS']
+};
+
+
+
+var paris = {
+  population : '2.211e6 ',
+  latitude : '48.8567 N',
+  longitude : '48.8567 N'
+};
+
+
+
+
+
+
+
+
+
+/*   OBJECTS  and accessing and changeing around   */
+
+
+
+
+
+var person = {
+  name : 'Sarah',            /* string value */
+  country : 'US',
+  age : 35,                 /*  number value  */
+  treehouseStudent : true,  /*  boolean    */
+  
+  skills : ['JavaScript', 'HTML', 'CSS']  /*  array inside object   */
+};
+
+function print(message) {                         /*  says we learned this code in earlier lesson */
+  var div = document.getElementById('output');            /*   LIAR  */
+  div.innerHTML = message;
+}
+
+var message = '<p>Hello.  My name is ' + person.name + '</p>';   /* calls up name   */
+message += '<p>I live in the ' + person.country + '</p>';       /*  calls up home   */
+person.name = 'Rainbow';                                        /*  change name    */
+message += '<p>But I wish my name was ' + person.name + '</p>';     /*  call up new name   */
+person.age += 1;                                                   /*  add to age    */
+message += '<p>My age is now ' + person.age + '</p>';              /*  call up new age    */
+
+
+message += '<p>I have ' + person.skills.length + ' skills: ';      /*  call up # of skills    */
+message += person.skills.join(', ') + '</p>';                    /*  'join' # of skills with skill list  */
+
+print(message);
+
+
+
+
+
+
+/*    EXAMPLE OF THE FOR IN LOOP    */
+
+
+
+
+
+var person = {
+  name : 'Sarah',
+  country : 'US',
+  age : 35,
+  treehouseStudent : true,
+  skills : ['JavaScript', 'HTML', 'CSS']
+};
+
+
+/*  prop just means whats listed in the object of person    */
+/*  we can name this what we want    */
+
+for (prop in person) {
+  console.log(prop);
+}
+/*  this will log the properties of the var person ( name counrty age trehousedness and skills to the console.   why?  idk)      */
+
+/*
+
+for (prop in person) {
+  console.log(prop, ': ', person[prop]);
+}    
+
+this will log to the console the property and its value, with a nice : to break up the action.
+ quiz said use var
+ 
+ examp
+ 
+ for (var prop in person)     */
+ 
+ 
+ 
+ 
+ 
+ 
+ /*  EXAMPLE OF AN ARRAY OF OBJECTS   */
+ 
+ 
+ 
+ 
+ var tasks = [
+  {
+      name: "Do homework",
+      due: "01/27/2016",
+      complete: false,
+      assignedTo: "Dave"
+  },
+ {
+      name: "Go to gym",
+      due: "01/27/2015",
+      complete: true,
+      assignedTo: "Cecilia"
+  },
+ {
+      name: "Complete JavaScript course",
+      due: "05/27/2015",
+      complete: false,
+      assignedTo: "You"
+  }
+];
+
+
+
+
+/*   MAKING AN ARRAY of AN OBJECT
+     
+        BEFORE AND AFTER     */
+        
+        /* b4 */
+                                                      var questions = [
+  ['How many states are in the United States?', 50],
+  ['How many continents are there?', 7],
+  ['How many legs does an insect have?', 6]
+];
+var correctAnswers = 0;
+var question;
+var answer;
+var response;
+
+function print(message) {
+  document.write(message);
+}
+
+for (var i = 0; i < questions.length; i += 1) {
+  question = questions[i][0];
+  answer = questions[i][1];
+  response = prompt(question);
+  response = parseInt(response);
+  if (response === answer) {
+    correctAnswers += 1;
+  } 
+}
+
+html = "You got " + correctAnswers + " question(s) right."
+print(html); 
+
+
+
+             
+             
+             
+             /* what we did   */
+             
+             
+             
+  /* these q and a's can be on one straight line each    */
+
+
+var questions = [
+  {
+    question: 'How many states are in the United States?', 
+    answer: 50
+  },
+  {
+    question: 'How many continents are there?', 
+    answer: 7
+  },
+  {
+    question: 'How many legs does an insect have?'
+    answer: 6
+  }
+];
+var correctAnswers = 0;
+var question;
+var answer;
+var response;
+
+function print(message) {
+  document.write(message);
+}
+
+for (var i = 0; i < questions.length; i += 1) {
+  question = questions[i].question;
+  answer = questions[i].question;
+  response = prompt(question);
+  response = parseInt(response);
+  if (response === answer) {
+    correctAnswers += 1;
+  } 
+}
+
+html = "You got " + correctAnswers + " question(s) right."
+print(html);           

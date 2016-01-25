@@ -1,0 +1,181 @@
+@media screen and (min-width: 480px) {
+
+  /***********************
+  TWO COLUMN LAYOUT
+  ************************/
+  
+  #primary {
+    width: 50%;
+    float: left;
+  }
+
+  #secondary {
+    width: 40%;
+    float: right;
+  }
+  
+  
+  /***********************
+  PAGE: PORTFOLIO
+  ************************/
+  
+  #gallery li {
+    width: 28.3333%;
+  } 
+  
+  #gallery li:nth-child(4n) {
+    clear: left;
+  }
+  
+  
+   /***********************
+  PAGE: ABOUT
+  ************************/
+  
+  .profile-photo{
+    float: left;
+    margin: 0 5% 80px 0;
+} 
+  
+@media screen and (min-width: 660px) {
+
+
+  
+  /***********************
+  HEADER
+  ************************/  
+  
+  nav {
+    background: none;
+    float: right;
+    font-size: 1.125em;
+    margin-right: 5%;
+    text-align: right;
+    width: 45%;
+  }
+  
+  
+
+  
+  
+  #logo {
+    float: left;
+    margin-left: 5%;
+    text-align: left;
+    width: 45%;
+  }
+  
+  h1 {
+    font-size: 4em;
+  }
+  
+  h2 {
+    font-size: 1.325em;
+    margin-bottom: 20px;
+  }
+  
+  header {
+    border-bottom: 5px solid #599a68;
+    margin-bottom: 60px;
+  }
+        
+  
+  }
+  
+  
+  
+  /*  contact.html   */
+  
+  
+   <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Patrick Spring | Artist</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='http://fonts.googleapis.com/css?family=Changa+One%7cOpen+sans:400italic,700italic,400,700,800' rel='stylesheet' type='text/css'> 
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+      <a href="index.html" id="logo">
+        <h1>Patrick Spring</h1>
+        <h2>Artist</h2>
+      </a>
+      <nav>
+      <ul>
+        <li><a href="index.html" >Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="selected">Contact</a></li>
+      </ul>
+      </nav>
+    </header>
+    <div id="wrapper">
+        <section id="primary">
+          <h3>General Information</h3>
+          <p>I will be taking on new students for sculpting classes this fall..  If interested, reserve a spot today, or contact with any mud related questions.</p>
+          <p>No operators are handling calls, so please leave a message, and the first person with clean hands, will return your call.
+          </p>
+        </section>
+        <section id="secondary">
+          <h3>Contact Details</h3>
+          <ul class="contact-info">
+            <li class="phone"><a href="tel:502-930-9543">502-930-9534</a></li>
+            <li class="mail"><a href="mailto:patrickspamspring@gmail.com">patrickspamspring@gmail.com</a></li>
+></li>
+          </ul>
+      </section>
+        <footer>
+
+          <p>&copy; 2015 Patrick Spring</p>
+        </footer> 
+      </div>
+   </body>
+ </html>
+ 
+ 
+ /*   about   */
+ 
+ 
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Patrick Spring | Artist</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='http://fonts.googleapis.com/css?family=Changa+One%7cOpen+sans:400italic,700italic,400,700,800' rel='stylesheet' type='text/css'> 
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <header>
+      <a href="index.html" id="logo">
+        <h1>Patrick Spring</h1>
+        <h2>Artist</h2>
+      </a>
+      <nav>
+      <ul>
+        <li><a href="index.html" >Portfolio</a></li>
+        <li><a href="about.html" class="selected">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      </nav>
+    </header>
+    <div id="wrapper">
+        <section>
+          <img src="artist.jpg" alt="Photograph of Patrick Spring" class="profile-photo">
+          <h3>About</h3>
+          <p>Hello, I'm Patrick Spring.  Here are some pictures of my clay creations.  After many years of dabbling in the arts, I found 'mud' to be the most reflective of my inner spirit.</p>
+</p>
+          <p></p>
+        </section>
+        <footer>
+
+          <p>&copy; 2015 Patrick Spring.</p>
+        </footer> 
+      </div>
+   </body>
+ </html>
