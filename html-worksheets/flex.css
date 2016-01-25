@@ -1,0 +1,10 @@
+/* ================================= 
+  Flexbox
+==================================== */
+
+/* inline-flex to bring it in    */
+
+.container {
+  display: flex;
+  height: 300px;
+}
