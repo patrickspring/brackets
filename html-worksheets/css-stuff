@@ -31,3 +31,27 @@
     border: solid 1px red;
 	}
 
+
+
+
+/* ================================= 
+  Flexbox
+==================================== */
+
+.container {
+	display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 280px;
+}
+
+.item-3 {
+ order: -1;
+}
+
+.item-1 {
+  order: -2:
+}
+
+
+/*  as the default for items is 0, above demenstrates how to move item 3 to 2.    */
