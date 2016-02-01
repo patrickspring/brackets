@@ -23,3 +23,58 @@ $(".warning").show("slow");
 $(".warning").hide().show("slow");
 
 
+/*========================
+  REVEALING SPOILERS
+  and disappearing buttons
+  first index, then code
+  ========================*/
+  
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Star Wars Spoilers</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+	<img src="img/deathstar.png" />
+	<p class="spoiler">
+		<!--Spoiler:-->
+		<span>Darth Vader is Luke Skywalker's Father! Noooooooooooo!</span>
+	</p>
+  
+  <p class="spoiler">
+    <!--Spoiler:-->
+    <span>Luke and Leia are Siblings.
+      EWWW!</span>
+  </p>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
+
+
+
+
+/*  Prevent spoilerphobes from seeing spoilers
+Solution: Hide spoilers and reveal them through user interaction   */
+
+/*  1, Hide spoiler  */
+
+$(".spoiler span").hide();
+
+/*   2, Add a button   */
+
+$(".spoiler").append("<button>Reveal Spoiler!</button>");
+
+/*  3, When button pressed   */
+
+$("button").click(function() {
+
+  /* 3.1, Show spoiler next to button clicked  */
+  
+  $(this).prev().show();
+  
+  /*  3.2, Get rid of button   */
+  
+  $(this).remove();
+});
