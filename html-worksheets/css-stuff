@@ -1,5 +1,6 @@
 /*  for vertical columns   */
 
+
 .col {
   display: inline-block;
   width: 50%;
@@ -38,6 +39,8 @@
   Flexbox
 ==================================== */
 
+
+
 .container {
 	display: flex;
   flex-wrap: wrap;
@@ -55,3 +58,700 @@
 
 
 /*  as the default for items is 0, above demenstrates how to move item 3 to 2.    */
+
+
+
+
+
+/* ================================= 
+  Flexbox
+==================================== 
+
+aligning itens on the cross axis
+
+*/
+
+
+
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+  height: 450px;
+}
+
+/*  
+
+.item {
+  flex-grow: 1;
+  flex-basis: 200px;
+}
+
+  shorthand version below 
+*/
+
+.item {
+  flex: 1 200px;
+}
+
+.item-1 {
+  align-self: flex-end;
+}
+
+.item-2 {
+  flex-grow: 2;
+}
+
+.item-4 {
+  align-self: center;
+}
+
+
+
+/*
+Three ways to center-align elements using flexbox
+
+Set the flex container's justify-content and align-items values to center:
+*/
+
+
+.container {
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*
+Set the flex container's justify-content value to center, while setting the flex item's align-self value to center:
+*/
+
+
+.container {
+  justify-content: center;
+}
+.item {
+  align-self: center;
+}
+
+
+/*  Set the flex item's margin value to auto:  */
+
+
+
+.item {
+  margin: auto;
+}
+
+
+
+
+
+
+/*    FLEX nav bar    */
+/*   for two clolumns   */
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+
+
+@media (min-width: 769px) {
+
+	.main-header,
+  .main-nav
+  .row {
+    display: flex;
+}
+
+  .main-header {
+    flex-direction: column;
+    align-items: center;
+}
+
+.col {
+  flex: 1;
+}
+
+}
+
+@media (min-width: 1025px) {
+
+  .main-header {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.primary {
+  flex: 2;
+}
+
+}
+
+
+
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+
+/*  for three columns, making secondary come up first   */
+
+
+
+@media (min-width: 769px) {
+
+	.main-header,
+	.main-nav,
+  .row {
+		display: flex;
+	 }
+
+	.main-header {
+		flex-direction: column;
+		align-items: center;
+	 }
+
+  .col {
+    flex: 1 50%;
+   }
+
+  .row {
+    flex-wrap: wrap;
+  }
+
+  .secondary {
+    order: -1;
+}
+
+}
+
+@media (min-width: 1025px) {
+
+	.main-header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+  .col {
+    flex-basis: 0;
+}
+
+  .primary {
+    flex-grow: 1.4;
+}
+
+}
+
+
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+/*  to make the columns 'containers, we'll add them to the other containers, then flex-direct them in the .col   then add the button, and but it evenly at bottom of container  */
+
+
+
+
+@media (min-width: 769px) {
+
+	.main-header,
+	.main-nav,
+	.row,
+  .col {
+		display: flex;
+	}
+
+	.main-header {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.col {
+		flex: 1;
+    flex-direction: column;
+	}
+
+  .button {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+}
+
+@media (min-width: 1025px) {
+
+	.main-header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}
+
+
+
+
+
+/*   stickin sticky footer to bottom   */
+
+
+
+/* ================================= 
+  Base Styles
+==================================== */
+
+
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.row {
+  flex: 1;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+
+	.main-header,
+	.main-nav {
+		display: flex;
+	}
+	.main-header {
+		flex-direction: column;
+		align-items: center;
+	}
+
+}
+
+@media (min-width: 1025px) {
+
+	.main-header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}
+
+
+
+
+/*===============================
+         selectors
+==================================*/
+
+/* Attribute Selectors ------------- */
+
+
+
+
+
+/*form[class="form-contact"] {
+  padding: 20px 24px;
+  background: red;
+}     =  below    */
+
+.form-contact {
+  padding: 20px 24px;
+  background: red;
+}
+
+/*
+
+div[id="container"] {
+  max-width: 500px;
+  margin: auto;
+  color: green;
+}    = below    */
+
+
+#container {
+  max-width: 500px;
+  margin: auto;
+  color: green;
+}
+
+
+/*
+input[type='email'] {
+  background: yellow;
+}
+    =  below      */
+
+
+input[placeholder] {
+  background: yellow;
+}
+
+
+
+
+
+
+
+/*   make link different color   */
+
+a[target="_blank"] {
+  color: orange;
+  text-decoration: none;
+  border-bottom: 1px dashed;
+}
+
+
+
+/* dont repeat yourself */
+
+/*  added br to html form class attribute, did this below, poof, 
+    rounded corners on contact form      */
+
+
+.br  {
+  border-radius: 1em;
+}
+
+/*  added the class "avatar rounded" into img in html, 
+    now its rounded tight, and cenered up.     */
+
+.avatar {
+  display: block;
+  margin: 0 auto 2em;
+  
+}
+
+.rounded {
+  border-radius: 50%;
+}
+
+
+/*  i want pointy finger to show up here   
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+}                            
+
+but now i want to shorten it up a bit    */
+
+.btn {
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  color: brown;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.default {
+  background-color: pink;
+}
+
+.error{
+  background-color: olive;
+}
+
+@media (min-width: 769px) {
+  .inln {
+    width: auto;
+    display: inline-block;
+  }
+  .btn + .btn {
+    margin-left: 25px;
+  }
+}
+
+/*   the + combinator above targets the elements imediate sibling   */
+     
+
+
+
+
+/*  COMBINATORS   I'll be back        */
+
+
+
+form > a {
+  font-size: 1em;
+}
+
+/*  above example of combinator targetting a direct child,
+    below ~ targets all the specified siblings that follow an element.   */
+
+
+h1 ~ label {
+  background: tomato;
+  color: white;
+  padding: 10px;
+}
+
+
+
+
+
+
+/*====================
+   PSEUDO
+ =====================*/
+ /* Structural Pseudo-classes------------------ */
+ 
+ 
+ 
+
+li:first-child {
+  background: red;
+  color: white;
+}
+
+li:last-child {
+  border: none;
+}
+
+span:only-child {
+  color: blue;
+  font-size: 2em;
+}
+
+li:empty {
+  background: tomato;
+}
+ 
+
+
+/*==========================
+substring matching attribute selectors
+   begins with and ends with
+ ===========================*/
+ 
+ /*  the carrot ^ here targets the href that starts with http   */
+
+a[href^="http:"] {
+  color: red;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding-left: 20px;
+}
+
+/*   the $ targets all href that end with .pdf, or .jpg, or zip,
+    and here you see, weve addedd an image on the css, without
+    trying to put it in the index html    */
+
+a[href$=".pdf"] {
+  background-image: url('../img/icn-pdf.svg')
+}
+
+a[href$=".jpg"] {
+  background-image: url('../img/icn-picture.svg')
+}
+
+a[href$=".zip"] {
+  background-image: url('../img/icn-zip.svg')
+}
+
+
+
+
+
+ 
+ 
+ 
+/* UI element states pseudo-classes ------------   :DISABLED AND CHECKED   */
+
+
+
+
+
+
+input:focus,
+textarea:focus {
+  border-color: black;
+}
+
+input:disabled {
+  background: red;
+}
+
+input[type="checkbox"]:checked + label {
+  font-weight: bold;
+}
+
+
+
+
+/*  :root  :target  :not  SELECTORS  */
+
+
+/*   :root selects highest level parent element   */
+
+:root {
+  background: #e3effb;
+}
+
+
+/*  :target selects an element when its the target of a link   */
+
+
+:target {
+  background: #384047;
+  color: white;
+}
+
+/*  here we target a single link   */
+
+#col-c:target {
+  background: #eff1f2;
+  color: initial;
+  box-shadow: 0 0 6px rbga(0,0,0, .2);
+}
+
+/* taget everything but not this one   
+
+div:not(#col-1) {
+  box-shadow: inset 0 2px 0 rgba(0,0,0, .15);
+}
+
+or be more specific     */
+
+div:not([type="submit"]) {
+  box-shadow: inset 0 2px 0 rgba(0,0,0, .15);
+}
+
+/*  here we move all columns but the first
+    then did the same to the links    */
+
+.col:not(first-child),
+nav a:not(first-child) {
+  margin-left: 15px;
+}
+
+
+
+
+
+/*===========================================
+    Pseudo ::first-line  ::first-letter  ::before
+    ::after
+===============================================*/
+
+
+
+/* Pseudo-elements --------------------------------     first line and character   highlight the first sentence, next enlarge first letter, then add jpg in front of download so they know what theyre downloading   */
+
+
+.intro::first-line {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.intro::first-letter {
+  float: left;
+  font-size: 80px;
+  color: white;
+  padding: 5px 10px;
+  background: #384047;
+  margin: 10px 10px 0 0;
+  border-radius: 5px;
+  line-height: 1;
+ }
+
+.jpg::before {
+  content: url(../img/icn-picture.svg);
+  margin-right: 8px;
+}
+
+.zip::before {
+  content: url(../img/icn-zip.svg);
+  margin-right: 8px;
+
+}
+
+.jpg::after {
+  content: " - JPG";
+  font-size: .75em;
+
+}
+
+.zip::after {
+  content: " - ZIP";
+  font-size: .75em;
+}
+
+/*  added a circle    */ 
+
+
+h1::before {
+  content: "";
+  display: inline-block;
+  width: 24px; 
+  height: 24px;
+  border-radius: 50%;
+  background: coral;
+  margin: 0 10px; 
+}
+
+
+
+.d-loads a::after {
+  content: attr(href); /* or ZIP or JPG as above  seem to negate above  */
+  display: inline-block;
+  color: initial;
+  font-size: .65em;
+  margin-left: 5px;
+}
+
+.d-loads a {
+  border: solid 1px;
+}
+
+
+
+
+
+/* Structural Pseudo-classes------------------ */
+
+
+
+/*  :nth-of-type selects the specific div, no matter what else is  placed in front of it.    
+
+div:nth-of-type(4) {
+  background: #52bab3;
+  color: white;
+}
+
+this one targets only the even
+
+div:nth-of-type(even) {
+  background: #52bab3;
+  color: white;
+}
+
+targets only the last of the divs    */
+
+div:last-of-type(1) {
+  background: #52bab3;
+  color: white;
+}
+
+
+
+
+
+
+
+
+

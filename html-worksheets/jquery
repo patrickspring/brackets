@@ -1,0 +1,25 @@
+/*==================
+   JQUERY 
+   ==================*/
+
+/* brings in text slowly
+
+//Hide Warning
+jQuery(".warning").hide();
+//Show Warning Slowly
+jQuery(".warning").show("slow");  */
+
+
+/*  the $ is shorthand for jquery  
+
+//Hide Warning
+$(".warning").hide();
+//Show Warning Slowly
+$(".warning").show("slow");
+*/
+
+/* easy version */
+
+$(".warning").hide().show("slow");
+
+
